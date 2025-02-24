@@ -27,7 +27,7 @@ seats = st.number_input("Number of Seats", min_value=2, max_value=9, step=1, val
 
 fuel_type = st.selectbox("Fuel Type", ["Diesel", "LPG", "Petrol"])
 transmission = st.selectbox("Transmission Type", ["Manual", "Automatic"])
-owner_type = st.selectbox("Owner Type", ["Second", "Third", "Fourth & Above"])  # No "First Owner"
+owner_type = st.selectbox("Owner Type", ["Second", "Third", "Fourth & Above"])
 
 # One-Hot Encoding
 fuel_type_diesel = 1 if fuel_type == "Diesel" else 0
@@ -64,7 +64,7 @@ st.write(f"🔍 Final input shape: {input_data.shape}")
 # Predict Price Button
 if st.button("Predict Price"):
     prediction = best_xgb.predict(input_data)[0]
-    st.success(f"💰 Estimated Car Price: ₹ {prediction:,.2f} Lakh")
+    st.success(f"Estimated Car Price: ₹ {prediction:,.2f} Lakh")
 
     # Feature Importance Display
     feature_importance = pd.DataFrame(
@@ -73,5 +73,5 @@ if st.button("Predict Price"):
 
     # Display Model Accuracy (R² score)
     model_r2 = 0.986  # As per your earlier message
-    st.write(f"📈 **Model Accuracy (R² Score):** {model_r2:.3f}")
+    st.write(f"**Model Accuracy (R² Score):** {model_r2:.3f}")
 
