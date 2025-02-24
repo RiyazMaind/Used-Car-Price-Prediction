@@ -2,6 +2,10 @@
 
 A machine learning-powered web app built with Streamlit that predicts the price of a used car based on its features.
 
+## Live Demo
+
+https://used-car-price-predictionby-riyaz.streamlit.app/
+
 ## Features
 
 - Predicts used car prices based on factors like **Year, Mileage, Engine, Power, Transmission, Fuel Type, and Ownership History**.
